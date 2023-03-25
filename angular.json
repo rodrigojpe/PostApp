@@ -26,6 +26,7 @@
             ],
             "styles": [
               "src/styles.css"
+             
             ],
             "scripts": []
           },
@@ -96,3 +97,4 @@
     }
   }
 }
+// "node_modules/todomvc-app-css/index.css"

@@ -1,0 +1,78 @@
+<!-- <header class=""> -->
+    <div class="container">
+        
+        <!-- <h1>todos</h1> -->
+        <!-- <form class="form-inline" >
+            <div class="form-row align-items-center">
+                <div class="col-md-1">
+                    <label class="form-label">Name:</label>
+                </div>
+                <div class="form-group col-md-4 text-left">
+
+                        <input 
+                        class="form-control"
+                        placeholder="What needs to be done?" 
+                        formControlName="textName"
+                        (keyup.enter)="agregar()"
+                        autofocus>
+                </div>
+        
+                <div class="col-auto">
+                    <label class="form-label">Description:</label>
+
+                    <input 
+                    class="form-control"
+                    placeholder="write your desc ..." 
+                    formControlName="textDescription"
+                    (keyup.enter)="agregar()"
+                    autofocus>
+                </div>
+                <div class="form-control">
+
+                    <button class="btn btn-primary" type="submit" [disabled]="!formSubmit.valid" >Submit</button>
+                </div>
+
+            </div>
+            <!-- [formControl]="txtInput" -->
+    
+        <!-- </form>  -->
+
+        <form [formGroup]="formSubmit" (ngSubmit)="agregar( )" class="mt-2">
+            <div class="row align-items-center my-88 d-flex justify-content-center">
+
+              <div class="col-md-4 my-1">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">Name</div>
+                    </div>     
+                <input 
+                    class="form-control"
+                    placeholder="Write your name" 
+                    formControlName="textName"
+                    (keyup.enter)="agregar()"
+                    autofocus>
+                </div>
+              </div>
+
+              <div class="col-md-4 my-1">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text">Description</div>
+                  </div>
+                  <input 
+                    class="form-control"
+                    placeholder="Write your desc ..." 
+                    formControlName="textDescription"
+                    (keyup.enter)="agregar()"
+                    autofocus>
+                </div>
+              </div>
+              
+              <div class="col-auto my-1">
+                <button type="submit" [disabled]="!formSubmit.valid"  class="btn btn-primary">Submit</button>
+              </div>
+            </div>
+          </form>
+        
+    </div>
+<!-- </header> -->

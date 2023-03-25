@@ -1,0 +1,49 @@
+ <section class="mt-2" *ngIf="posts.length > 0">
+     <div class="container mt-2">
+         <table class="table table-striped">
+          <thead>
+            <tr>
+              <th scope="col">Name</th>
+              <th scope="col">Descriptión</th>
+              <th scope="col">Actión</th>
+            </tr>
+          </thead>
+          <tbody >
+            <tr *ngFor="let post of posts; let i = index " >
+              <td> {{ post.textName}}</td>
+              <td> {{post.textDescription}}</td>
+              <td> <button (click)="delete(post.id)" class="btn btn-danger" ><i class="bi bi-x-circle"></i></button> </td>
+            </tr>
+           
+          </tbody>
+        </table>
+
+     </div>
+
+ </section>  
+   
+   
+   
+   
+   <!-- <li [class.completed]="post.completed"
+        [class.editing]="editing" >
+        <div class="view">
+
+            <input 
+            class="toggle" 
+            type="checkbox" 
+            [formControl]="chkCompleted"
+            >
+
+            <label (dblclick)="edit()" >{{ post.textName }}</label>
+            <button class="destroy"></button>
+
+        </div>
+        <input 
+        class="edit" 
+        type="text"
+        [formControl]="txtInput"
+        (blur)="endEdition()"
+        #inputSelected
+        >
+    </li> -->

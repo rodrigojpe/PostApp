@@ -1,0 +1,21 @@
+    <div class="container">
+            <div class="row align-items-center my-88 d-flex justify-content-center mt-2">
+
+              <div class="col-md-10 my-1">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text">Description</div>
+                  </div>
+                  <input 
+                    [formControl]="txtInput"
+                    class="form-control"
+                    placeholder="Write your desc ..." >
+                </div>
+              </div>
+              
+              <div class="col-auto my-1">
+                <button (click)="shearch()" [disabled]="!txtInput.valid"   class="btn btn-primary">Submit</button>
+              </div>
+            </div>
+    </div>
+
