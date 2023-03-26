@@ -20,6 +20,7 @@ export class PostItemComponent implements OnInit {
 
 // chkCompleted!: FormControl;
 // txtInput!: FormControl;
+filtroActual!: string;
 
 editing : boolean = false;
 posts : Post[] = [];
@@ -35,11 +36,15 @@ posts : Post[] = [];
     //     this.store.dispatch( actions.toggle({ id: this.post.id }) )
     // })
 
-    this.store.select('posts').subscribe(
-      posts => this.posts = posts
-    )
+    // this.store.select('posts').subscribe(
+    //   posts => this.posts = posts
+    // )
+    this.store.subscribe(state => {
+      this.posts = state.posts;
+      this.filtroActual = state.filtro
+    })
 
-    console.log('::::::::::', this.post)
+    console.log('::::::::::filtroActual::::::::::', this.filtroActual)
   }
 
   edit(){

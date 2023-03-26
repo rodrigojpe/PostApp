@@ -1,10 +1,11 @@
 # TodoApp
-
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.4.
 
-## Development server
+## use ngrx pattern
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Run Aplication Post develompent
+Firt run command `npm install`, and then 
+Run `ng serve`  or `npx ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
 ## Code scaffolding
 
@@ -25,3 +26,16 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
+## Instructions Add new Post
+
+to add new post yuo cant write a name and description into the innput, and then press click in te buton `Add Post`, are both values it's required
+
+## Instructions Delete Post
+
+to delete one post you can press the `button red that containt one icon x` in the section of actions of the table
+
+## Instructions Search Post
+
+to search a determinta post you can find by name of the post, write the name in te input superior and `click out side` or press button `Search` 

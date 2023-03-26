@@ -10,22 +10,22 @@ import { postReducer } from './post/post.reducer';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 
 import { PostModule } from './post/post.module';
-import { FooterComponent } from './footer/footer.component';
 import { ReactiveFormsModule } from '@angular/forms';
+
+import { appReducers } from './app.reducer';
 
 @NgModule({
   declarations: [
     AppComponent,
    
     
-        FooterComponent
   ],
   imports: [
     BrowserModule,
     ReactiveFormsModule,
     AppRoutingModule,
   PostModule,
-  StoreModule.forRoot({ posts: postReducer }),
+  StoreModule.forRoot( appReducers ),
   StoreDevtoolsModule.instrument({
     maxAge: 25, // Retains last 25 states
     logOnly: !isDevMode(), // Restrict extension to log-only mode

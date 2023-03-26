@@ -22,3 +22,8 @@ export const serach = createAction(
     '[POST] Filter Post',
     props<{ textName: string}>()
     );
+
+export const list = createAction(
+    '[POST] List Post',
+    props<{ textName: string}>()
+    );

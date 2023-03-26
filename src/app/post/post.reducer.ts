@@ -1,7 +1,7 @@
 
 
 import { createReducer, on } from '@ngrx/store';
-import { crear, toggle, delet, serach } from './post.actions';
+import { crear, toggle, delet, serach, list } from './post.actions';
 import { Post } from './models/post.models';
 
 const initialState: Post[] = [
@@ -29,11 +29,16 @@ export const postReducer = createReducer(  initialState,
   on(delet, (state, {id}) => state.filter(post => post.id !== id )),
 
 
-  on(serach, (state, {textName }) => state.filter(post => post.textName === textName)) 
+  on(serach, (state, {textName }) => state.filter(post => post.textName === textName)), 
    
-    
-  
-    
-
-//   on(reset, (state) => 0)
-);
+  on(list, (state, {textName}) => {
+    return state.map( post => {
+      if (post.textName === textName){
+        return post
+        
+      }else {
+        return post;
+      }
+    })
+  })
+)

@@ -17,7 +17,7 @@ export class PostListComponent  implements OnInit {
   ngOnInit(): void {
 
     this.store.select('posts').subscribe(
-      posts => this.posts = posts
+      // posts => this.posts = posts
     )
   }
 

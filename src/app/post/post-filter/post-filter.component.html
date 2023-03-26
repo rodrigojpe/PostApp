@@ -3,18 +3,17 @@
 
               <div class="col-md-10 my-1">
                 <div class="input-group">
-                  <div class="input-group-prepend">
-                    <div class="input-group-text">Description</div>
-                  </div>
+                  
                   <input 
                     [formControl]="txtInput"
                     class="form-control"
+                    (change)="onChange()"
                     placeholder="Write your desc ..." >
                 </div>
               </div>
               
               <div class="col-auto my-1">
-                <button (click)="shearch()" [disabled]="!txtInput.valid"   class="btn btn-primary">Submit</button>
+                <button (click)="shearch()" [disabled]="!txtInput.valid"   class="btn btn-primary">Search</button>
               </div>
             </div>
     </div>
